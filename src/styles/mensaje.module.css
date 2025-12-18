@@ -1,0 +1,280 @@
+/* ===== Layout base ===== */
+.layout {
+    background: #f7f7fb;
+    padding: 18px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 920px;
+    margin: auto;
+    background: #fff;
+    padding: 18px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== Títulos ===== */
+.container h1 {
+    margin: 0 0 12px;
+}
+
+/* ===== Acciones superiores ===== */
+.actionsTop {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Fila principal de acciones */
+.actionsRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+/* fila: Eliminar todo + Elementos */
+.metaRow {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.metaRow .info {
+    margin-left: auto;
+    font-weight: 500;
+}
+
+/* ===== Botones ===== */
+.btn {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 0;
+    background: #2563eb;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.ghost {
+    background: #eee;
+    color: #111;
+}
+
+.small {
+    font-size: 13px;
+    padding: 6px 10px;
+}
+
+.danger {
+    background: #ef4444;
+}
+
+/* ===== Info / textos secundarios ===== */
+.info {
+    font-size: 13px;
+    color: #666;
+}
+
+/* ===== Lista ===== */
+.list {
+    margin-top: 16px;
+}
+
+/* ===== Input file oculto ===== */
+.container input[type="file"] {
+    display: none;
+}
+
+/* ===== Modal overlay ===== */
+.modalBg {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* ===== Modal ===== */
+.modal {
+    background: #fff;
+    padding: 18px;
+    border-radius: 8px;
+    max-width: 520px;
+    width: 92%;
+    max-height: 85vh;
+    overflow: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeInScale 0.15s ease-out;
+}
+
+.modal h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+/* ===== Formulario dentro del modal ===== */
+.modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.modal label {
+    font-weight: 600;
+}
+
+.modal input[type="text"],
+.modal textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+.modal textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+/* Contador de caracteres */
+.charCount {
+    align-self: flex-end;
+    font-size: 12px;
+    color: #777;
+    margin-top: 2px;
+}
+
+/* acciones del modal */
+.panelActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+/* ===== Items de la lista ===== */
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background: #fafafa;
+}
+
+.item+.item {
+    margin-top: 8px;
+}
+
+.item:hover {
+    background: #f5f7fb;
+    border-color: #e5e7eb;
+}
+
+/* Contenido del item */
+.itemContent {
+    flex: 1;
+    min-width: 0;
+}
+
+.item h3 {
+    margin: 0 0 4px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #111;
+}
+
+.item p {
+    margin: 0;
+    font-size: 14px;
+    color: #444;
+    line-height: 1.4;
+    max-width: 560px;
+    word-break: break-word;
+}
+
+/* Acciones del item */
+.itemActions {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    .item {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .itemActions {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 480px) {
+    .panelActions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+}
+
+/* ===== Animación modal ===== */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Campo con botón en línea */
+.inlineField {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+/* Acciones debajo del textarea */
+.contentActions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4px;
+}
+
+/* Estado visual de copiado */
+.copiado {
+    background: #dcfce7;
+    color: #166534;
+    font-weight: 600;
+}

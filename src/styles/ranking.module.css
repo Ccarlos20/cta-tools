@@ -1,0 +1,215 @@
+/* ===== Layout general ===== */
+
+.layout {
+    position: relative;
+}
+
+/* ===== Botones superiores ===== */
+
+.btnSuperior {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.btnSuperior button {
+    padding: 8px 14px;
+    border: none;
+    background-color: #3498db;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btnSuperior button:hover {
+    background-color: #217dbb;
+}
+
+/* ===== CRUD (modal) ===== */
+
+.pnCrud {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.pnContenido {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80vw;
+    height: 90vh;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow: auto;
+}
+
+.statsContainer {
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+/* ===== Botones generales ===== */
+
+.btn {
+    padding: 6px 12px;
+    border: none;
+    background-color: #3498db;
+    border-radius: 5px;
+    margin: 3px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #217dbb;
+}
+
+.btn.cancelar {
+    background-color: #e74c3c;
+}
+
+.btn.cancelar:hover {
+    background-color: #c0392b;
+}
+
+/* ===== Formularios ===== */
+
+.tblCrud input {
+    width: 100%;
+    padding: 4px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+.pnCrud input[type="text"],
+.pnCrud input[type="number"] {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    width: 100%;
+}
+
+.pnCrud input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.pnAgregar table td {
+    padding: 5px;
+}
+
+.pnCrud select {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    width: 100%;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.pnCrud select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* ===== Contenido ranking ===== */
+
+.contenidoRanking {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ===== Tabla principal ===== */
+
+.table {
+    border-collapse: collapse;
+    min-width: 500px;
+    margin: 0 auto;
+}
+
+.table th,
+.table td {
+    border: 1px solid #333;
+    padding: 8px;
+}
+
+.table th {
+    background-color: #444;
+    color: #fff;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Alineación del nombre */
+.table td:nth-child(2) {
+    text-align: left;
+}
+
+/* Rank y Puntaje centrados */
+.table td:nth-child(1),
+.table th:nth-child(1),
+.table td:nth-child(3),
+.table th:nth-child(3) {
+    text-align: center;
+}
+
+.flechaSube {
+    color: #2aee7c;
+    /* verde decente, no fosforescente */
+    font-weight: bold;
+}
+
+.flechaBaja {
+    color: #e74c3c;
+    /* rojo consistente con cancelar */
+    font-weight: bold;
+}
+
+/* Fecha */
+
+.fechaBarra {
+    width: 100%;
+    background-color: #3f48cc;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    padding: 18px 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.imagenHeader {
+    margin-top: -10px;
+    position: relative;
+    z-index: 3;
+}
+
+.fechaWrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
