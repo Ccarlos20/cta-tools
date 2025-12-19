@@ -31,12 +31,24 @@ export default function RankingPage() {
     }, [gremios]);
 
     /* ===== Captura ===== */
+
+    const obtenerFechaArchivo = () => {
+        const hoy = new Date();
+        const day = String(hoy.getDate()).padStart(2, "0");
+        const month = String(hoy.getMonth() + 1).padStart(2, "0");
+        const year = hoy.getFullYear();
+
+        return `${day}-${month}-${year}`;
+    };
+
     const capturarPantalla = async () => {
         const html2canvas = (await import("html2canvas")).default;
         const canvas = await html2canvas(document.body, { useCORS: true });
 
+        const fecha = obtenerFechaArchivo();
+
         const enlace = document.createElement("a");
-        enlace.download = "captura.png";
+        enlace.download = `${fecha}.png`;
         enlace.href = canvas.toDataURL("image/png");
         enlace.click();
     };
