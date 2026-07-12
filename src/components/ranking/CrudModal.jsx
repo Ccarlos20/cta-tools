@@ -7,6 +7,12 @@ export default function CrudModal({
     onEditar,
     onCerrar
 }) {
+    const estado = {
+        nada: "Sin cambios",
+        subio: "Subió",
+        bajo: "Bajó"
+    }
+
     return (
         <div className={style.pnCrud}>
             <div className={style.pnContenido}>
@@ -28,7 +34,7 @@ export default function CrudModal({
                                 <td>{g[0]}</td>
                                 <td>{g[1]}</td>
                                 <td>{g[2]}</td>
-                                <td>{g[3]}</td>
+                                <td>{estado[g[3]]}</td>
                                 <td>
                                     <button
                                         className={style.btn}

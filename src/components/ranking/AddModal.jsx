@@ -34,6 +34,15 @@ export default function AddModal({
 
                 <form onSubmit={handleSubmit}>
                     <table>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Nombre</th>
+                                <th>Puntaje</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
                         <tbody>
                             <tr>
                                 <td>
